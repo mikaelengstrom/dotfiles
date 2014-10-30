@@ -57,6 +57,7 @@ apps=(
   tree
   wget
   ack
+  the_silver_searcher
   docker
   hub
   git
@@ -85,11 +86,12 @@ apps=(
   sourcetree
   nvalt
   skype
+  composer
+  ansible
   hipchat
 )
 
-vagrant plugin install vagrant-bindfs
-vagrant plugin install vagrant-hostsupdater
+
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
@@ -102,3 +104,12 @@ brew cleanup
 brew linkapps
 
 chsh -s /bin/zsh
+
+# Other libs you might want
+sudo gem install bundler
+
+npm install -g grunt-cli
+npm install -g bower
+
+vagrant plugin install vagrant-bindfs
+vagrant plugin install vagrant-hostsupdater
