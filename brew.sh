@@ -49,12 +49,13 @@ brew install wget --enable-iri
 # Install more recent versions of some OS X tools.
 brew install macvim --override-system-vim
 brew install homebrew/dupes/grep
-brew install homebrew/php/php55 --with-gmp
 brew install imagemagick --with-webp
 
 apps=(
   node
   tree
+  php55
+  wp-cli
   wget
   ack
   the_silver_searcher
@@ -62,6 +63,9 @@ apps=(
   hub
   git
   mercurial
+  ssh-copy-id
+  composer
+  ansible
 )
 
 brew install ${apps[@]}
@@ -72,6 +76,7 @@ apps=(
   quicksilver
   dropbox
   google-chrome
+  mailbox
   transmit
   appcleaner
   firefox
@@ -86,9 +91,6 @@ apps=(
   sourcetree
   nvalt
   skype
-  ssh-copy-id
-  composer
-  ansible
   hipchat
 )
 

@@ -1,25 +1,88 @@
+" Vundle setup
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+
+""  Custom plugins goes here ""
+
+Bundle "chrisbra/color_highlight.git"
+Bundle "skwp/vim-colors-solarized"
+Bundle "itchyny/lightline.vim"
+Bundle "jby/tmux.vim.git"
+Bundle "morhetz/gruvbox"
+Bundle "xsunsmile/showmarks.git"
+
+Bundle "gregsexton/gitv"
+Bundle "mattn/gist-vim"
+Bundle "tpope/vim-fugitive"
+Bundle "tpope/vim-git"
+
+Bundle "briancollins/vim-jst"
+Bundle "pangloss/vim-javascript"
+Bundle "rodjek/vim-puppet"
+Bundle "othree/javascript-libraries-syntax.vim"
+Bundle "digitaltoad/vim-jade.git"
+Bundle "groenewege/vim-less.git"
+Bundle "itspriddle/vim-jquery.git"
+Bundle "jtratner/vim-flavored-markdown.git"
+Bundle "kchmck/vim-coffee-script"
+Bundle "scrooloose/syntastic.git"
+Bundle "vim-addon-mw-utils"
+Bundle "garbas/vim-snipmate.git"
+Bundle "nelstrom/vim-markdown-preview"
+Bundle "skwp/vim-html-escape"
+Bundle "tpope/vim-haml"
+Bundle "honza/vim-snippets"
+
+Bundle "scrooloose/nerdtree.git"
+Bundle "kien/ctrlp.vim"
+Bundle "xolox/vim-misc"
+Bundle "xolox/vim-session"
+Bundle "vim-scripts/tlib"
+
+Bundle "justinmk/vim-sneak"
+Bundle "rking/ag.vim"
+Bundle "vim-scripts/IndexedSearch"
+Bundle "nelstrom/vim-visual-star-search"
+Bundle "skwp/greplace.vim"
+Bundle "Lokaltog/vim-easymotion"
+
+Bundle "austintaylor/vim-indentobject"
+Bundle "bootleq/vim-textobj-rubysymbol"
+Bundle "coderifous/textobj-word-column.vim"
+Bundle "kana/vim-textobj-datetime"
+Bundle "kana/vim-textobj-entire"
+Bundle "kana/vim-textobj-function"
+Bundle "kana/vim-textobj-user"
+Bundle "lucapette/vim-textobj-underscore"
+Bundle "nathanaelkane/vim-indent-guides"
+Bundle "nelstrom/vim-textobj-rubyblock"
+Bundle "thinca/vim-textobj-function-javascript"
+Bundle "vim-scripts/argtextobj.vim"
+
+Bundle "tpope/vim-abolish"
+Bundle "tpope/vim-endwise.git"
+Bundle "tpope/vim-ragtag"
+Bundle "tpope/vim-repeat.git"
+Bundle "tpope/vim-surround.git"
+Bundle "tpope/vim-unimpaired"
+
+Bundle "Raimondi/delimitMate"
+
+"" END Plugins ""
+call vundle#end()
+filetype plugin indent on
+
 " Use the Solarized Dark theme
 set background=dark
 colorscheme solarized
 
-" Make Vim more useful
-set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
-" Enhance command-line completion
-set wildmenu
-" Allow cursor keys in insert mode
-set esckeys
-" Allow backspace in insert mode
-set backspace=indent,eol,start
-" Optimize for fast terminal connections
-set ttyfast
-" Add the g flag to search/replace by default
-set gdefault
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
-" Change mapleader
-let mapleader=","
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
@@ -27,7 +90,7 @@ set noeol
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 if exists("&undodir")
-	set undodir=~/.vim/undo
+    set undodir=~/.vim/undo
 endif
 
 " Don’t create backups when editing files in certain directories
@@ -45,20 +108,9 @@ set number
 syntax on
 " Highlight current line
 set cursorline
-" Make tabs as wide as two spaces
-set tabstop=2
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
-" Highlight searches
-set hlsearch
-" Ignore case of searches
-set ignorecase
-" Highlight dynamically as pattern is typed
-set incsearch
-" Always show status line
-set laststatus=2
-" Enable mouse in all modes
 set mouse=a
 " Disable error bells
 set noerrorbells
@@ -75,31 +127,78 @@ set title
 " Show the (partial) command as it’s being typed
 set showcmd
 " Use relative line numbers
-if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
-endif
+set relativenumber
+au BufReadPost * set relativenumber
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
-" Strip trailing whitespace (,ss)
-function! StripWhitespace()
-	let save_cursor = getpos(".")
-	let old_query = getreg('/')
-	:%s/\s\+$//e
-	call setpos('.', save_cursor)
-	call setreg('/', old_query)
-endfunction
-noremap <leader>ss :call StripWhitespace()<CR>
+"Perofrmance tweeks
+set nocursorcolumn
+set nocursorline
+syntax sync minlines=256
+set synmaxcol=256
+set ttyfast " u got a fast terminal
+set ttyscroll=3
+set lazyredraw " to avoid scrolling problems
+
+
+
+" hilight search
+hi Search cterm=none ctermbg=4 ctermfg=15
+set hlsearch
+set incsearch
+
+" Set leaders
+let mapleader = '-'
+let maplocalleader = '_'
+
+"tabcompleation
+set wildmode=longest,list
+
+"Tabs
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set tabstop=4
+
+" autoindent
+set cindent
+set smartindent
+set autoindent
+
+"search
+set ignorecase
+set smartcase
+
+"autocomplete
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType scss set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+
+"Remove crap on save
+autocmd BufWritePre * :retab
+autocmd BufWritePre * :%s/\s\+$//e
+
+"html and sql hilight in php files
+let php_sql_query=1
+let php_htmlInStrings=1
+
+"commandremap
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+"normal remap
+noremap gD <c-]>
+noremap ' `
+noremap ` '
+
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
-
-" Automatic commands
-if has("autocmd")
-	" Enable file type detection
-	filetype on
-	" Treat .json files as .js
-	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-	" Treat .md files as Markdown
-	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
-endif
+" edit vimrc
+nnoremap <leader>ev :e ~/.vimrc<cr>
+nnoremap <leader>sv :e ~/.vimrc<cr>
