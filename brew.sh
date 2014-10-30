@@ -91,6 +91,7 @@ apps=(
   sourcetree
   nvalt
   skype
+  querious
   hipchat
 )
 
