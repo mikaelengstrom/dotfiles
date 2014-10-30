@@ -89,6 +89,7 @@ apps=(
 )
 
 vagrant plugin install vagrant-bindfs
+vagrant plugin install vagrant-hostsupdater
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
@@ -99,3 +100,5 @@ brew cask install --appdir="/Applications" ${apps[@]}
 brew cleanup
 
 brew linkapps
+
+chsh -s /bin/zsh
