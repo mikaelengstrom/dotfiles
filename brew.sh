@@ -86,6 +86,7 @@ apps=(
   sourcetree
   nvalt
   skype
+  ssh-copy-id
   composer
   ansible
   hipchat
