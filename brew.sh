@@ -54,6 +54,7 @@ brew install imagemagick --with-webp
 apps=(
   node
   tree
+  irssi
   php55
   wp-cli
   wget
@@ -77,6 +78,7 @@ apps=(
   dropbox
   google-chrome
   mailbox
+  the-unarchiver
   transmit
   appcleaner
   firefox
