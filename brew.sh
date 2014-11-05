@@ -56,6 +56,9 @@ apps=(
   tree
   irssi
   php55
+  php55-apcu
+  php55-mcrypt
+  php55-xdebug
   wp-cli
   wget
   ack
@@ -119,3 +122,5 @@ npm install -g bower
 
 vagrant plugin install vagrant-bindfs
 vagrant plugin install vagrant-hostsupdater
+
+sudo gem install sass
