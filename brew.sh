@@ -54,6 +54,7 @@ brew install imagemagick --with-webp
 apps=(
   node
   tree
+  htop
   irssi
   php55
   php55-apcu
