@@ -56,6 +56,7 @@ apps=(
   tree
   htop
   irssi
+  cmake
   php55
   php55-apcu
   php55-mcrypt

@@ -15,38 +15,26 @@ Bundle "morhetz/gruvbox"
 Bundle "xsunsmile/showmarks.git"
 
 Bundle "gregsexton/gitv"
-Bundle "mattn/gist-vim"
 Bundle "tpope/vim-fugitive"
-Bundle "tpope/vim-git"
 
-Bundle "briancollins/vim-jst"
 Bundle "pangloss/vim-javascript"
-Bundle "rodjek/vim-puppet"
 Bundle "othree/javascript-libraries-syntax.vim"
-Bundle "digitaltoad/vim-jade.git"
+
 Bundle "groenewege/vim-less.git"
 Bundle "itspriddle/vim-jquery.git"
-Bundle "jtratner/vim-flavored-markdown.git"
 Bundle "kchmck/vim-coffee-script"
 Bundle "scrooloose/syntastic.git"
 Bundle "vim-addon-mw-utils"
 Bundle "garbas/vim-snipmate.git"
-Bundle "nelstrom/vim-markdown-preview"
 Bundle "skwp/vim-html-escape"
-Bundle "tpope/vim-haml"
 Bundle "honza/vim-snippets"
 
 Bundle "scrooloose/nerdtree.git"
 Bundle "kien/ctrlp.vim"
-Bundle "xolox/vim-misc"
-Bundle "xolox/vim-session"
-Bundle "vim-scripts/tlib"
 
-Bundle "justinmk/vim-sneak"
 Bundle "rking/ag.vim"
 Bundle "vim-scripts/IndexedSearch"
 Bundle "nelstrom/vim-visual-star-search"
-Bundle "skwp/greplace.vim"
 Bundle "Lokaltog/vim-easymotion"
 
 Bundle "austintaylor/vim-indentobject"
@@ -68,8 +56,11 @@ Bundle "tpope/vim-ragtag"
 Bundle "tpope/vim-repeat.git"
 Bundle "tpope/vim-surround.git"
 Bundle "tpope/vim-unimpaired"
+Bundle "tpope/vim-dispatch"
 
 Bundle "Raimondi/delimitMate"
+Bundle "Valloric/YouCompleteMe"
+"
 
 "" END Plugins ""
 call vundle#end()
@@ -199,6 +190,7 @@ noremap ` '
 
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
+
 " edit vimrc
 nnoremap <leader>ev :e ~/.vimrc<cr>
 nnoremap <leader>sv :e ~/.vimrc<cr>
