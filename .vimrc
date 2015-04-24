@@ -12,7 +12,6 @@ Bundle "skwp/vim-colors-solarized"
 Bundle "itchyny/lightline.vim"
 Bundle "jby/tmux.vim.git"
 Bundle "morhetz/gruvbox"
-Bundle "xsunsmile/showmarks.git"
 
 Bundle "gregsexton/gitv"
 Bundle "tpope/vim-fugitive"
@@ -37,7 +36,6 @@ Bundle "vim-scripts/IndexedSearch"
 Bundle "nelstrom/vim-visual-star-search"
 Bundle "Lokaltog/vim-easymotion"
 
-Bundle "austintaylor/vim-indentobject"
 Bundle "bootleq/vim-textobj-rubysymbol"
 Bundle "coderifous/textobj-word-column.vim"
 Bundle "kana/vim-textobj-datetime"
@@ -60,10 +58,17 @@ Bundle "tpope/vim-dispatch"
 
 Bundle "Raimondi/delimitMate"
 Bundle "Valloric/YouCompleteMe"
-"
+Bundle 'Shougo/vimproc'
+Bundle 'Shougo/unite.vim'
+Bundle "m2mdas/phpcomplete-extended"
+
+Bundle 'stephpy/vim-php-cs-fixer'
+Bundle 'othree/html5.vim'
 
 "" END Plugins ""
 call vundle#end()
+
+set autoindent
 filetype plugin indent on
 
 " Use the Solarized Dark theme
@@ -132,8 +137,6 @@ set ttyfast " u got a fast terminal
 set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
 
-
-
 " hilight search
 hi Search cterm=none ctermbg=4 ctermfg=15
 set hlsearch
@@ -149,13 +152,8 @@ set wildmode=longest,list
 "Tabs
 set shiftwidth=4
 set softtabstop=4
-set expandtab
 set tabstop=4
-
-" autoindent
-set cindent
-set smartindent
-set autoindent
+set expandtab
 
 "search
 set ignorecase
@@ -179,6 +177,14 @@ autocmd BufWritePre * :%s/\s\+$//e
 "html and sql hilight in php files
 let php_sql_query=1
 let php_htmlInStrings=1
+
+" php-specifc junk
+let g:phpcomplete_index_composer_command="composer"
+let g:phpcomplete_index_composer_command="composer"
+let g:syntastic_php_checkers = ['phpcs']
+let g:syntastic_phpcs_conf="--standard=PSR2"
+
+
 
 "commandremap
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'

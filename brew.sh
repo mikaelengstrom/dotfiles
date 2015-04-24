@@ -49,6 +49,7 @@ brew install wget --enable-iri
 # Install more recent versions of some OS X tools.
 brew install macvim --override-system-vim
 brew install homebrew/dupes/grep
+brew install homebrew/apache
 brew install imagemagick --with-webp
 
 apps=(
@@ -61,16 +62,20 @@ apps=(
   php55-apcu
   php55-mcrypt
   php55-xdebug
+  mysql
   wp-cli
   wget
   ack
   the_silver_searcher
+  dnsmasq
+  node
   docker
   hub
   git
   mercurial
   ssh-copy-id
   composer
+  httpd24
   ansible
 )
 
@@ -126,3 +131,7 @@ vagrant plugin install vagrant-bindfs
 vagrant plugin install vagrant-hostsupdater
 
 sudo gem install sass
+
+
+ln -sfv $(brew --prefix dnsmasq)/homebrew.mxcl.dnsmasq.plist ~/Library/LaunchAgents
+launchctl load -Fw ~/Library/LaunchAgents/homebrew.mxcl.dnsmasq.plist

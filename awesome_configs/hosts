@@ -1,0 +1,120 @@
+#
+# Host Database
+#
+# localhost is used to configure the loopback interface
+#
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1   localhost
+127.0.0.1   steab.haus.se steabcom.haus.se
+#127.0.0.1   mistelinnovation.se www.mistelinnovation.se
+127.0.0.1 expandia.haus.se expandiano.haus.se
+127.0.0.1 local.host
+#127.0.0.1 ifous-program.haus.se
+#127.0.0.1  webbshop.parkenzoo.se
+
+
+
+#127.0.0.1 yobber.haus.se
+127.0.0.1 amk.haus.se
+127.0.0.1   solidpark.haus.se
+127.0.0.1   static1.akademibokhandeln.se
+127.0.0.1   static2.akademibokhandeln.se
+127.0.0.1   static3.akademibokhandeln.se
+127.0.0.1   static4.akademibokhandeln.se
+127.0.0.1   static5.akademibokhandeln.se
+#127.0.0.1  akademibokhandeln.se
+
+127.0.0.1   dev.gatheringvasteras.se
+127.0.0.1   dev.svartbalte.se
+
+127.0.0.1 visitvasteras.haus.se vasterascityfestival.haus.se
+127.0.0.1 samtrafiken.haus.se
+#127.0.0.1 geblod.haus.se
+127.0.0.1 abax.haus.se abax.no.haus.se abax.fi.haus.se abax.co.uk.haus.se abax.dk.haus.se abax.gb.haus.se
+#127.0.0.1 projekt3b.haus.se
+#127.0.0.1 sl.haus.se
+127.0.0.1 test.test.com
+
+
+
+127.0.0.1   kopparstaden.haus.se kopparstaden.careofhaus.se
+127.0.0.1  badovarme.haus.se
+#127.0.0.1 glitter.careofhaus.se
+127.0.0.1 glitterse.haus.se glittercom.haus.se glitterfi.haus.se glitterdk.haus.se glitterno.haus.se glitterpl.haus.se glittereu.haus.se
+
+#127.0.0.1 meltwaternews.com
+127.0.0.1 fastigo.haus.se
+
+##
+# Kafka
+######################
+#5.9.93.79 kafka kafka.careofhaus.se
+
+
+##
+# live
+######################
+
+#178.79.130.25 mistelinnovation.se www.mistelinnovation.se mistelinnovation.com www.mistelinnovation.com
+178.79.130.25 checkin2.fripunkt.se
+178.79.130.25 creoformfbapp.haus.se
+178.79.130.25 kattis.careofhaus.se
+178.79.130.25 yobbertest.se
+178.79.130.25 kokpunkten.test fryx.test
+#178.79.130.25 ratio.se www.ratio.se
+#178.79.130.25 tagrorelse.se www.tagrorelse.se
+
+
+##
+# Webb
+######################
+#92.43.37.140 geblod.careofhaus.se
+#92.43.37.140 gv.haus.se
+#92.43.37.140 samtrafiken.haus.se
+#92.43.37.140 madeforsales.se www.madeforsales.se
+92.43.37.140 kokpunkten.haus.se
+92.43.37.140 prosang-webbokning.haus.se
+
+255.255.255.255 broadcasthost
+::1             localhost
+fe80::1%lo0 localhost
+
+
+#192.168.50.4 expandia.haus.se
+
+
+62.97.225.207 abax.co.uk www.abax.co.uk
+#109.74.204.46 galleriannian.se www.galleriannian.se
+109.74.204.46 baracker.se www.baracker.se
+
+#127.0.0.1 laslovet.se www.laslovet.se www.läslovet.se läslovet.se xn--lslovet-5wa.se www.xn--lslovet-5wa.se
+#212.247.229.10 test.laslovet.se
+
+#176.58.120.141 support.careofhaus.se
+#
+176.58.120.141 ac.haus.se
+
+109.74.203.228 elastic.careofhaus.se
+
+92.43.37.140 webb.careofhaus.se
+#178.79.133.95 fibra.se www.fibra.se
+
+
+
+#185.7.61.56 intraeligo.com www.intraeligo.com intraeligo.se www.intraeligo.se
+
+
+
+
+#91.240.252.13 secure.hoistspar.se
+
+# Hoist stage
+#94.136.75.46 master.hoistspar.se hoistfinance.nl hoistfinance.fr hoistfinance.de hoistfinance.com hoistspar.se www.master.hoistspar.se www.hoistfinance.nl www.hoistfinance.fr www.hoistfinance.de www.hoistfinance.com www.hoistspar.se en.hoistfinance.nl hoistfinance.be fr.hoistfinance.be hoistfinance.pl hoistfinance.co.uk www.en.hoistfinance.nl www.hoistfinance.be www.fr.hoistfinance.be www.hoistfinance.pl www.hoistfinance.co.uk se.hoistfinance.com www.robinson-way.com robinson-way.com hoistfinance.it www.hoistfinance.it
+
+# hoist dev
+#127.0.0.1   master.hoistspar.se.haus.se hoistfinance.nl.haus.se hoistfinance.fr.haus.se hoistfinance.de.haus.se hoistspar.se.haus.se hoistfinance.com.haus.se en.hoistfinance.com.haus.se hoistfinance.be.haus.se fr.hoistfinance.be.haus.se hoistfinance.pl.haus.se www.robinson-way.com.haus.se en.hoistspar.se.haus.se se.hoistfinance.com.haus.se fr.hoistfinance.com.haus.se de.hoistfinance.com.haus.se hoistfinance.it.haus.se debtor.robinson-way.com.haus.se finance.robinson-way.com.haus.se
+
+212.111.42.209 sarlin.se.haus.se
+
+217.78.18.92 timpan.vps fallskarmscenter.se www.fallskarmscenter.se
