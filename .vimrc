@@ -12,8 +12,10 @@ Bundle "skwp/vim-colors-solarized"
 Bundle "itchyny/lightline.vim"
 Bundle "jby/tmux.vim.git"
 Bundle "morhetz/gruvbox"
+Bundle "Xuyuanp/nerdtree-git-plugin"
 
 Bundle "gregsexton/gitv"
+Bundle 'airblade/vim-gitgutter'
 Bundle "tpope/vim-fugitive"
 
 Bundle "pangloss/vim-javascript"
@@ -60,10 +62,16 @@ Bundle "Raimondi/delimitMate"
 Bundle "Valloric/YouCompleteMe"
 Bundle 'Shougo/vimproc'
 Bundle 'Shougo/unite.vim'
-Bundle "m2mdas/phpcomplete-extended"
+" Bundle "m2mdas/phpcomplete-extended"
 
 Bundle 'stephpy/vim-php-cs-fixer'
 Bundle 'othree/html5.vim'
+
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-easytags'
+Bundle 'majutsushi/tagbar'
+Bundle 'bling/vim-airline'
+
 
 "" END Plugins ""
 call vundle#end()
@@ -181,10 +189,11 @@ let php_htmlInStrings=1
 " php-specifc junk
 let g:phpcomplete_index_composer_command="composer"
 let g:phpcomplete_index_composer_command="composer"
-let g:syntastic_php_checkers = ['phpcs']
-let g:syntastic_phpcs_conf="--standard=PSR2"
+let g:syntastic_php_checkers = ['php', 'phpcs']
+let g:syntastic_php_phpcs_args="--standard=PSR2"
 
-
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_auto_trigger = 0
 
 "commandremap
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
@@ -200,3 +209,34 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 " edit vimrc
 nnoremap <leader>ev :e ~/.vimrc<cr>
 nnoremap <leader>sv :e ~/.vimrc<cr>
+
+" ----- xolox/vim-easytags settings -----
+" Where to look for tags files
+set tags=./tags;,~/.vimtags
+" Sensible defaults
+let g:easytags_events = ['BufReadPost', 'BufWritePost']
+let g:easytags_async = 1
+let g:easytags_dynamic_files = 2
+let g:easytags_resolve_links = 1
+let g:easytags_suppress_ctags_warning = 1
+
+" ----- majutsushi/tagbar settings -----
+" Open/close tagbar with \b
+nmap <silent> <leader>b :TagbarToggle<CR>
+" Uncomment to open tagbar automatically whenever possible
+"autocmd BufEnter * nested :call tagbar#autoopen(0)
+"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#hunks#non_zero_only = 1
+hi clear SignColumn
+
+" ----- jistr/vim-nerdtree-tabs -----
+" Open/close NERDTree Tabs with \t
+nmap <silent> <leader>t :NERDTreeToggle<CR>
+" To have NERDTree always open on startup
+let g:nerdtree_tabs_open_on_console_startup = 1
+
+set noswapfile
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
