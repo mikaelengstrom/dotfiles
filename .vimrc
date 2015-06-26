@@ -1,82 +1,99 @@
-" Vundle setup
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
 
-""  Custom plugins goes here ""
+if has('vim_starting')
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
 
-Bundle "chrisbra/color_highlight.git"
-Bundle "skwp/vim-colors-solarized"
-Bundle "itchyny/lightline.vim"
-Bundle "jby/tmux.vim.git"
-Bundle "morhetz/gruvbox"
-Bundle "Xuyuanp/nerdtree-git-plugin"
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-Bundle "gregsexton/gitv"
-Bundle 'airblade/vim-gitgutter'
-Bundle "tpope/vim-fugitive"
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-Bundle "pangloss/vim-javascript"
-Bundle "othree/javascript-libraries-syntax.vim"
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-Bundle "groenewege/vim-less.git"
-Bundle "itspriddle/vim-jquery.git"
-Bundle "kchmck/vim-coffee-script"
-Bundle "scrooloose/syntastic.git"
-Bundle "vim-addon-mw-utils"
-Bundle "SirVer/ultisnips"
-Bundle "skwp/vim-html-escape"
-Bundle "honza/vim-snippets"
+NeoBundle "chrisbra/color_highlight.git"
+NeoBundle "skwp/vim-colors-solarized"
+NeoBundle "itchyny/lightline.vim"
+NeoBundle "jby/tmux.vim.git"
+NeoBundle "morhetz/gruvbox"
+NeoBundle "Xuyuanp/nerdtree-git-plugin"
+NeoBundle "gregsexton/gitv"
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle "tpope/vim-fugitive"
+NeoBundle "pangloss/vim-javascript"
+NeoBundle "othree/javascript-libraries-syntax.vim"
+NeoBundle "groenewege/vim-less.git"
+NeoBundle "itspriddle/vim-jquery.git"
+NeoBundle "kchmck/vim-coffee-script"
+NeoBundle "scrooloose/syntastic.git"
+NeoBundle "vim-addon-mw-utils"
+NeoBundle "SirVer/ultisnips"
+NeoBundle "skwp/vim-html-escape"
+NeoBundle "honza/vim-snippets"
+NeoBundle "scrooloose/nerdtree.git"
+NeoBundle "kien/ctrlp.vim"
+NeoBundle "rking/ag.vim"
+NeoBundle "vim-scripts/IndexedSearch"
+NeoBundle "nelstrom/vim-visual-star-search"
+NeoBundle "Lokaltog/vim-easymotion"
+NeoBundle "bootleq/vim-textobj-rubysymbol"
+NeoBundle "coderifous/textobj-word-column.vim"
+NeoBundle "kana/vim-textobj-datetime"
+NeoBundle "kana/vim-textobj-entire"
+NeoBundle "kana/vim-textobj-function"
+NeoBundle "kana/vim-textobj-user"
+NeoBundle "lucapette/vim-textobj-underscore"
+NeoBundle "nathanaelkane/vim-indent-guides"
+NeoBundle "nelstrom/vim-textobj-rubyblock"
+NeoBundle "thinca/vim-textobj-function-javascript"
+NeoBundle "vim-scripts/argtextobj.vim"
+NeoBundle "tpope/vim-abolish"
+NeoBundle "tpope/vim-endwise.git"
+NeoBundle "tpope/vim-ragtag"
+NeoBundle "tpope/vim-repeat.git"
+NeoBundle "tpope/vim-surround.git"
+NeoBundle "tpope/vim-unimpaired"
+NeoBundle "tpope/vim-dispatch"
+NeoBundle "Raimondi/delimitMate"
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
+NeoBundle 'Valloric/YouCompleteMe', {
+ \ 'build'      : {
+    \ 'mac'     : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+    \ 'unix'    : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+    \ 'windows' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+    \ 'cygwin'  : './install.sh --clang-completer --system-libclang --omnisharp-completer'
+    \ }
+ \ }
 
-Bundle "scrooloose/nerdtree.git"
-Bundle "kien/ctrlp.vim"
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'xolox/vim-misc'
+NeoBundle 'xolox/vim-easytags'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'bling/vim-airline'
 
-Bundle "rking/ag.vim"
-Bundle "vim-scripts/IndexedSearch"
-Bundle "nelstrom/vim-visual-star-search"
-Bundle "Lokaltog/vim-easymotion"
+call neobundle#end()
 
-Bundle "bootleq/vim-textobj-rubysymbol"
-Bundle "coderifous/textobj-word-column.vim"
-Bundle "kana/vim-textobj-datetime"
-Bundle "kana/vim-textobj-entire"
-Bundle "kana/vim-textobj-function"
-Bundle "kana/vim-textobj-user"
-Bundle "lucapette/vim-textobj-underscore"
-Bundle "nathanaelkane/vim-indent-guides"
-Bundle "nelstrom/vim-textobj-rubyblock"
-Bundle "thinca/vim-textobj-function-javascript"
-Bundle "vim-scripts/argtextobj.vim"
-
-Bundle "tpope/vim-abolish"
-Bundle "tpope/vim-endwise.git"
-Bundle "tpope/vim-ragtag"
-Bundle "tpope/vim-repeat.git"
-Bundle "tpope/vim-surround.git"
-Bundle "tpope/vim-unimpaired"
-Bundle "tpope/vim-dispatch"
-
-Bundle "Raimondi/delimitMate"
-Bundle "Valloric/YouCompleteMe"
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/unite.vim'
-" Bundle "m2mdas/phpcomplete-extended"
-
-Bundle 'othree/html5.vim'
-
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-easytags'
-Bundle 'majutsushi/tagbar'
-Bundle 'bling/vim-airline'
-
-
-"" END Plugins ""
-call vundle#end()
-
-set autoindent
+" Required:
 filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
 
 " Use the Solarized Dark theme
 set background=dark
@@ -89,12 +106,6 @@ set encoding=utf-8 nobomb
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
-" Centralize backups, swapfiles and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-if exists("&undodir")
-    set undodir=~/.vim/undo
-endif
 
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*

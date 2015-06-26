@@ -58,6 +58,7 @@ apps=(
   htop
   irssi
   cmake
+  fasd
   php55
   php55-apcu
   php55-mcrypt
@@ -119,12 +120,11 @@ brew cleanup
 
 brew linkapps
 
-chsh -s /bin/zsh
-
 # Other libs you might want
 sudo gem install bundler
 
 npm install -g grunt-cli
+npm install -g gulp
 npm install -g bower
 
 vagrant plugin install vagrant-bindfs
@@ -135,3 +135,13 @@ sudo gem install sass
 
 ln -sfv $(brew --prefix dnsmasq)/homebrew.mxcl.dnsmasq.plist ~/Library/LaunchAgents
 launchctl load -Fw ~/Library/LaunchAgents/homebrew.mxcl.dnsmasq.plist
+
+# Install ZPrezto
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+
+chsh -s /bin/zsh
