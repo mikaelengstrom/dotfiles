@@ -26,7 +26,7 @@ Bundle "itspriddle/vim-jquery.git"
 Bundle "kchmck/vim-coffee-script"
 Bundle "scrooloose/syntastic.git"
 Bundle "vim-addon-mw-utils"
-Bundle "garbas/vim-snipmate.git"
+Bundle "SirVer/ultisnips"
 Bundle "skwp/vim-html-escape"
 Bundle "honza/vim-snippets"
 
@@ -64,7 +64,6 @@ Bundle 'Shougo/vimproc'
 Bundle 'Shougo/unite.vim'
 " Bundle "m2mdas/phpcomplete-extended"
 
-Bundle 'stephpy/vim-php-cs-fixer'
 Bundle 'othree/html5.vim'
 
 Bundle 'xolox/vim-misc'
@@ -163,6 +162,10 @@ set softtabstop=4
 set tabstop=4
 set expandtab
 
+autocmd FileType python set sw=4
+autocmd FileType python set ts=4
+autocmd FileType python set sts=4
+
 "search
 set ignorecase
 set smartcase
@@ -178,10 +181,6 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 
-"Remove crap on save
-autocmd BufWritePre * :retab
-autocmd BufWritePre * :%s/\s\+$//e
-
 "html and sql hilight in php files
 let php_sql_query=1
 let php_htmlInStrings=1
@@ -189,8 +188,8 @@ let php_htmlInStrings=1
 " php-specifc junk
 let g:phpcomplete_index_composer_command="composer"
 let g:phpcomplete_index_composer_command="composer"
-let g:syntastic_php_checkers = ['php', 'phpcs']
-let g:syntastic_php_phpcs_args="--standard=PSR2"
+let g:syntastic_php_checkers = ['phpcs']
+let g:syntastic_phpcs_conf="--standard=PSR2"
 
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_auto_trigger = 0
@@ -240,3 +239,12 @@ set noswapfile
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Python
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_use_ultisnips_completer = 1
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+
+" Ultisnips
