@@ -22,7 +22,7 @@ NeoBundle "skwp/vim-colors-solarized"
 NeoBundle "itchyny/lightline.vim"
 NeoBundle "jby/tmux.vim.git"
 NeoBundle "morhetz/gruvbox"
-NeoBundle "Xuyuanp/nerdtree-git-plugin"
+" Buggy?? NeoBundle "Xuyuanp/nerdtree-git-plugin"
 NeoBundle "gregsexton/gitv"
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle "tpope/vim-fugitive"
