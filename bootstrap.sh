@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 dir=~/dotfiles 
 files=".curlrc .gitconfig .gitignore .gvimrc .hushlogin .inputrc .tmux.conf .vimrc .wgetrc .zlogin .zlogout .zpreztorc .zprofile .zshenv .zshrc .irssi"

@@ -22,11 +22,12 @@ NeoBundle "skwp/vim-colors-solarized"
 NeoBundle "itchyny/lightline.vim"
 NeoBundle "jby/tmux.vim.git"
 NeoBundle "morhetz/gruvbox"
-NeoBundle "Xuyuanp/nerdtree-git-plugin"
+" Buggy?? NeoBundle "Xuyuanp/nerdtree-git-plugin"
 NeoBundle "gregsexton/gitv"
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle "tpope/vim-fugitive"
-NeoBundle "pangloss/vim-javascript"
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+NeoBundleLazy 'ahayman/vim-nodejs-complete', {'autoload':{'filetypes':['javascript']}}
 NeoBundle "othree/javascript-libraries-syntax.vim"
 NeoBundle "groenewege/vim-less.git"
 NeoBundle "itspriddle/vim-jquery.git"
@@ -72,10 +73,10 @@ NeoBundle 'Shougo/vimproc.vim', {
 \ }
 NeoBundle 'Valloric/YouCompleteMe', {
  \ 'build'      : {
-    \ 'mac'     : './install.sh --clang-completer --system-libclang --omnisharp-completer',
-    \ 'unix'    : './install.sh --clang-completer --system-libclang --omnisharp-completer',
-    \ 'windows' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
-    \ 'cygwin'  : './install.sh --clang-completer --system-libclang --omnisharp-completer'
+    \ 'mac'     : './install.sh --clang-completer --system-libclang',
+    \ 'unix'    : './install.sh --clang-completer --system-libclang',
+    \ 'windows' : './install.sh --clang-completer --system-libclang',
+    \ 'cygwin'  : './install.sh --clang-completer --system-libclang'
     \ }
  \ }
 
@@ -85,6 +86,7 @@ NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-easytags'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'moll/vim-node'
 
 call neobundle#end()
 
@@ -203,7 +205,7 @@ let g:syntastic_php_checkers = ['phpcs']
 let g:syntastic_phpcs_conf="--standard=PSR2"
 
 let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_auto_trigger = 0
+"let g:ycm_auto_trigger = 0
 
 "commandremap
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
@@ -259,3 +261,4 @@ let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
 
 " Ultisnips
+let g:UltiSnipsExpandTrigger="<c-tab>"
