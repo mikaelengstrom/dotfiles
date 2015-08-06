@@ -26,6 +26,7 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
+  'tmux' \
   'editor' \
   'history' \
   'directory' \
@@ -162,4 +163,4 @@ zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
 zstyle ':prezto:module:tmux:auto-start' local 'yes'
 
 # Integrate with iTerm2.
-zstyle ':prezto:module:tmux:iterm' integrate 'yes' zstyle ':prezto:module:tmux:auto-start' remote 'yes'
+#zstyle ':prezto:module:tmux:iterm' integrate 'yes'
