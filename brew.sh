@@ -87,6 +87,7 @@ brew install ${apps[@]}
 brew install caskroom/cask/brew-cask
 apps=(
   quicksilver
+  java
   dropbox
   google-chrome
   mailbox
