@@ -56,6 +56,7 @@ apps=(
   node
   tree
   htop
+  tmux
   irssi
   cmake
   fasd
