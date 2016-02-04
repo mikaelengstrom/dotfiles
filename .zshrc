@@ -21,5 +21,6 @@ export EDITOR="vim"
 export VISUAL="vim"
 
 alias wpcreatesuperuser="wp user create mien mikael.engstrom@frojd.se --role=administrator --user_pass=asdf"
+alias simplemailserver="python -m smtpd -n -c DebuggingServer localhost:1025"
 
 eval "$(pyenv init -)"
