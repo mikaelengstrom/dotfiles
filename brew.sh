@@ -78,6 +78,7 @@ apps=(
   ssh-copy-id
   composer
   httpd24
+  pyenv
   ansible
 )
 
@@ -107,7 +108,6 @@ apps=(
   nvalt
   skype
   querious
-  hipchat
 )
 
 
