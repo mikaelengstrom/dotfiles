@@ -18,6 +18,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle "chrisbra/color_highlight.git"
+NeoBundle "davidhalter/jedi-vim.git"
+NeoBundle "adimit/prolog.vim"
 NeoBundle "skwp/vim-colors-solarized"
 NeoBundle "itchyny/lightline.vim"
 NeoBundle "jby/tmux.vim.git"
@@ -34,21 +36,13 @@ NeoBundle "itspriddle/vim-jquery.git"
 NeoBundle "kchmck/vim-coffee-script"
 NeoBundle "scrooloose/syntastic.git"
 NeoBundle "vim-addon-mw-utils"
-NeoBundle "SirVer/ultisnips"
 NeoBundle "skwp/vim-html-escape"
-NeoBundle "honza/vim-snippets"
 NeoBundle "scrooloose/nerdtree.git"
 NeoBundle "kien/ctrlp.vim"
 NeoBundle "rking/ag.vim"
 NeoBundle "vim-scripts/IndexedSearch"
-NeoBundle "nelstrom/vim-visual-star-search"
-NeoBundle "Lokaltog/vim-easymotion"
 NeoBundle "bootleq/vim-textobj-rubysymbol"
 NeoBundle "coderifous/textobj-word-column.vim"
-NeoBundle "kana/vim-textobj-datetime"
-NeoBundle "kana/vim-textobj-entire"
-NeoBundle "kana/vim-textobj-function"
-NeoBundle "kana/vim-textobj-user"
 NeoBundle "lucapette/vim-textobj-underscore"
 NeoBundle "nathanaelkane/vim-indent-guides"
 NeoBundle "nelstrom/vim-textobj-rubyblock"
@@ -164,7 +158,7 @@ set incsearch
 
 " Set leaders
 let mapleader = '-'
-let maplocalleader = '_'
+let maplocalleader = ' '
 
 "tabcompleation
 set wildmode=longest,list
