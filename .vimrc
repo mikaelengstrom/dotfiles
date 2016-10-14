@@ -18,6 +18,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle "chrisbra/color_highlight.git"
+NeoBundle "davidhalter/jedi-vim.git"
+NeoBundle "adimit/prolog.vim"
 NeoBundle "skwp/vim-colors-solarized"
 NeoBundle "itchyny/lightline.vim"
 NeoBundle "jby/tmux.vim.git"
@@ -27,17 +29,13 @@ NeoBundle "tpope/vim-fugitive"
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'ahayman/vim-nodejs-complete', {'autoload':{'filetypes':['javascript']}}
 NeoBundle "scrooloose/syntastic.git"
-NeoBundle "honza/vim-snippets"
+NeoBundle "vim-addon-mw-utils"
+NeoBundle "skwp/vim-html-escape"
 NeoBundle "scrooloose/nerdtree.git"
 NeoBundle "kien/ctrlp.vim"
 NeoBundle "rking/ag.vim"
 NeoBundle "vim-scripts/IndexedSearch"
-NeoBundle "coderifous/textobj-word-column.vim"
-NeoBundle "kana/vim-textobj-datetime"
-NeoBundle "kana/vim-textobj-entire"
-NeoBundle "kana/vim-textobj-function"
-NeoBundle "kana/vim-textobj-user"
-NeoBundle "thinca/vim-textobj-function-javascript"
+NeoBundle "nathanaelkane/vim-indent-guides"
 NeoBundle "vim-scripts/argtextobj.vim"
 NeoBundle "tpope/vim-abolish"
 NeoBundle "tpope/vim-endwise.git"
@@ -143,7 +141,7 @@ set incsearch
 
 " Set leaders
 let mapleader = '-'
-let maplocalleader = '_'
+let maplocalleader = ' '
 
 "tabcompleation
 set wildmode=longest,list
