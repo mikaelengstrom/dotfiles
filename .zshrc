@@ -24,3 +24,6 @@ alias wpcreatesuperuser="wp user create mien mikael.engstrom@frojd.se --role=adm
 alias simplemailserver="python -m smtpd -n -c DebuggingServer localhost:1025"
 
 eval "$(pyenv init -)"
+eval "$(docker-machine env)"
+
+eval $(thefuck --alias)

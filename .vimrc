@@ -21,37 +21,22 @@ NeoBundle "chrisbra/color_highlight.git"
 NeoBundle "skwp/vim-colors-solarized"
 NeoBundle "itchyny/lightline.vim"
 NeoBundle "jby/tmux.vim.git"
-NeoBundle "morhetz/gruvbox"
-" Buggy?? NeoBundle "Xuyuanp/nerdtree-git-plugin"
 NeoBundle "gregsexton/gitv"
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle "tpope/vim-fugitive"
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'ahayman/vim-nodejs-complete', {'autoload':{'filetypes':['javascript']}}
-NeoBundle "othree/javascript-libraries-syntax.vim"
-NeoBundle "groenewege/vim-less.git"
-NeoBundle "itspriddle/vim-jquery.git"
-NeoBundle "kchmck/vim-coffee-script"
 NeoBundle "scrooloose/syntastic.git"
-NeoBundle "vim-addon-mw-utils"
-NeoBundle "SirVer/ultisnips"
-NeoBundle "skwp/vim-html-escape"
 NeoBundle "honza/vim-snippets"
 NeoBundle "scrooloose/nerdtree.git"
 NeoBundle "kien/ctrlp.vim"
 NeoBundle "rking/ag.vim"
 NeoBundle "vim-scripts/IndexedSearch"
-NeoBundle "nelstrom/vim-visual-star-search"
-NeoBundle "Lokaltog/vim-easymotion"
-NeoBundle "bootleq/vim-textobj-rubysymbol"
 NeoBundle "coderifous/textobj-word-column.vim"
 NeoBundle "kana/vim-textobj-datetime"
 NeoBundle "kana/vim-textobj-entire"
 NeoBundle "kana/vim-textobj-function"
 NeoBundle "kana/vim-textobj-user"
-NeoBundle "lucapette/vim-textobj-underscore"
-NeoBundle "nathanaelkane/vim-indent-guides"
-NeoBundle "nelstrom/vim-textobj-rubyblock"
 NeoBundle "thinca/vim-textobj-function-javascript"
 NeoBundle "vim-scripts/argtextobj.vim"
 NeoBundle "tpope/vim-abolish"
@@ -81,7 +66,6 @@ NeoBundle 'Valloric/YouCompleteMe', {
  \ }
 
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'othree/html5.vim'
 NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-easytags'
 NeoBundle 'majutsushi/tagbar'
@@ -118,8 +102,6 @@ set modelines=4
 " Enable per-directory .vimrc files and disable unsafe commands in them
 set exrc
 set secure
-" Enable line numbers
-set number
 " Enable syntax highlighting
 syntax on
 " Highlight current line
@@ -142,9 +124,6 @@ set showmode
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
-" Use relative line numbers
-set relativenumber
-au BufReadPost * set relativenumber
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
