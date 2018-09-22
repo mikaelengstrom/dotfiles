@@ -82,6 +82,7 @@ NeoBundleCheck
 " Use the Solarized Dark theme
 set background=dark
 colorscheme solarized
+let g:solarized_termtrans=1
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
